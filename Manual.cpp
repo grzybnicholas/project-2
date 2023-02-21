@@ -86,6 +86,7 @@ string Manual::getDevice(){
 bool Manual::setWebsite(const string& website){
  if(!regex_match(website, regex{"^(https|http):\/\/www\.\w+\.\w{2,}"})){
   url_ = "Broken Link";
+  website_ = true;
  }else{
   website_ = true;
  }

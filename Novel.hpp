@@ -21,11 +21,13 @@ class Novel: public Book{
   string getGenre();
   void setGenre(const string& genre);
   vector<string> getCharacterList();
-  vector<review> getCharacterListString();
+  string getCharacterListString();
   void addCharacter(const string& character);
   bool hasFilmAdaptation();
   void setFilmAdaptation();
+  review createReview(const double& score, const string& review);
   double getAverageRating();
+  void addReview(const review& rev);
   void calculateAverageRating();
 };
 #endif

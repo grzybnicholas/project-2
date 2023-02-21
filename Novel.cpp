@@ -71,6 +71,18 @@ vector<string> Novel::getCharacterList(){
 
 /**
 
+  @param  : a reference to string indicating a character
+
+  @post   : inserts the character into the character_list_ vector
+
+**/
+
+void Novel::addCharacter(const string& character){
+  character_list_.push_back(character);
+}
+
+/**
+
   @return   : the value of the film_adaptation_ private member
 
 **/
@@ -87,7 +99,16 @@ void Novel::setFilmAdaptation(){
   adaptation_ = true;
 }
 
+/**
 
+  @param  : a reference to review object
+
+  @post   : inserts the review argument into the reviews_ vector
+
+**/
+void Novel::addReview(const review& rev){
+ reviews_.push_buck(rev);
+}
 /**
 
   @return   : the value of the average rating private member

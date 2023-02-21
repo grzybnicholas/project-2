@@ -26,6 +26,6 @@ class Novel: public Book{
   bool hasFilmAdaptation();
   void setFilmAdaptation();
   double getAverageRating();
-
+  void calculateAverageRating();
 };
 #endif

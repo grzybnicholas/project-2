@@ -69,3 +69,30 @@ vector<string> Novel::getCharacterList(){
   return character_list_;
 }
 
+/**
+
+  @return   : the value of the film_adaptation_ private member
+
+**/
+bool Novel::hasFilmAdaptation(){
+  return adaptation_;
+}
+
+/**
+
+  @post   : sets has_film_adaptation_ private member to true
+
+**/
+void Novel::setFilmAdaptation(){
+  adaptation_ = true;
+}
+
+
+/**
+
+  @return   : the value of the average rating private member
+
+**/
+double Novel::getAverageRating(){
+  return average_rating_;
+}

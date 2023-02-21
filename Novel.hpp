@@ -16,10 +16,10 @@ class Novel: public Book{
   double average_rating_;
   bool adaptation_;
  public:
-  Novel();
-  Novel(string book, string author, int pageCount, string genre, bool digital = false, bool adapt = false);
+  Novel()=default;
+  Novel(string title, string author, int pageCount, string genre, bool digital = false, bool adapt = false);
   string getGenre();
-  string setGenre(const string& genre);
+  void setGenre(const string& genre);
   vector<string> getCharacterList();
   vector<review> getCharacterListString();
   void addCharacter(const string& character);

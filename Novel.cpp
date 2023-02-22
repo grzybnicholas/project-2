@@ -14,19 +14,19 @@ struct review {
 
   Parameterized constructor.
 
-  @param     : The title of the book (a string)
+  param     : The title of the book (a string)
 
-  @param     : The author of the book (a string)
+  param     : The author of the book (a string)
 
-  @param     : The number of pages in the book (a positive integer)
+  param     : The number of pages in the book (a positive integer)
 
-  @param     : The genre of the novel (a string)
+  param     : The genre of the novel (a string)
 
-  @param     : A flag indicating whether the book is in digital form
+  param     : A flag indicating whether the book is in digital form
 
                 with DEFAULT VALUE False (a Boolean)
 
-  @param     : A flag indicating whether there is a film adaptation
+  param     : A flag indicating whether there is a film adaptation
 
                 for this novel with DEFAULT VALUE False (a Boolean)
 
@@ -39,7 +39,7 @@ Novel::Novel(string title, string author, int pageCount, string genre, bool digi
 
 /**
 
-  @return   : the value of the genre private member
+  return   : the value of the genre private member
 
 **/
 
@@ -50,9 +50,9 @@ string Novel::getGenre() const{
 
 /**
 
-  @param  : a reference to string indicating the genre of the book
+  param  : a reference to string indicating the genre of the book
 
-  @post   : sets genre_ private member to the
+  post   : sets genre_ private member to the
 
               value of the parameter
 
@@ -63,7 +63,7 @@ void Novel::setGenre(const string& genre){
 }
 /**
 
-  @return   : the vector containing the list of characters for this novel
+  return   : the vector containing the list of characters for this novel
 
 **/
 vector<string> Novel::getCharacterList() const{ 
@@ -71,7 +71,7 @@ vector<string> Novel::getCharacterList() const{
 }
 /**
 
-  @return    : a string of all the characters in the
+  return    : a string of all the characters in the
 
               character_list_ private member, concatenated
 
@@ -86,9 +86,9 @@ string Novel::getCharacterListString() const{
 
 /**
 
-  @param  : a reference to string indicating a character
+  param  : a reference to string indicating a character
 
-  @post   : inserts the character into the character_list_ vector
+  post   : inserts the character into the character_list_ vector
 
 **/
 
@@ -98,7 +98,7 @@ void Novel::addCharacter(const string& character){
 
 /**
 
-  @return   : the value of the film_adaptation_ private member
+  return   : the value of the film_adaptation_ private member
 
 **/
 bool Novel::hasFilmAdaptation() const{
@@ -107,7 +107,7 @@ bool Novel::hasFilmAdaptation() const{
 
 /**
 
-  @post   : sets has_film_adaptation_ private member to true
+  post   : sets has_film_adaptation_ private member to true
 
 **/
 void Novel::setFilmAdaptation() const{
@@ -115,13 +115,13 @@ void Novel::setFilmAdaptation() const{
 }
 /**
 
-  @param    : a reference to floating point number (double) indicating
+  param    : a reference to floating point number (double) indicating
 
               the score of the  review
 
-  @param    : a reference to string indicating the rating of the review
+  param    : a reference to string indicating the rating of the review
 
-  @return   : creates and returns a review data type with
+  return   : creates and returns a review data type with
 
               score and rating as indicated by the parameters
 
@@ -134,9 +134,9 @@ review Novel::createReview(const double& score, const string& rating){
 }
 /**
 
-  @param  : a reference to review object
+  param  : a reference to review object
 
-  @post   : inserts the review argument into the reviews_ vector
+  post   : inserts the review argument into the reviews_ vector
 
 **/
 void Novel::addReview(const review& rev){
@@ -144,7 +144,7 @@ void Novel::addReview(const review& rev){
 }
 /**
 
-  @return   : the value of the average rating private member
+  return   : the value of the average rating private member
 
 **/
 double Novel::getAverageRating() const{
@@ -154,7 +154,7 @@ double Novel::getAverageRating() const{
 
 /**
 
-  @post   : retrieves all scores from the reviews_ vector and
+  post   : retrieves all scores from the reviews_ vector and
 
             computes the average to set value of the average_rating_
 
@@ -162,5 +162,9 @@ double Novel::getAverageRating() const{
 
 **/
 void Novel::calculateAverageRating() const{
-
+    double average_rating_ = 0;
+    for (review x : reviews_) {
+          average_rating_ += x.score_;
+    }
+    average_rating_ /= reviews_.size();
 }

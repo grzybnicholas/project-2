@@ -21,27 +21,27 @@ Textbook::Textbook(){
 
   Parameterized constructor.
 
-  @param     : The title of the book (a string)
+  param     : The title of the book (a string)
 
-  @param     : The author of the book (a string)
+  param     : The author of the book (a string)
 
-  @param     : The number of pages in the book (a positive integer)
+  param     : The number of pages in the book (a positive integer)
 
-  @param     : The subject of the book (a string)
+  param     : The subject of the book (a string)
 
-  @param     : A flag indicating whether the book is in digital form
+  param     : A flag indicating whether the book is in digital form
 
                 with DEFAULT VALUE False (a Boolean)
 
-  @param     : The grade level of the book (of type grade_level)
+  param     : The grade level of the book (of type grade_level)
 
                 with DEFAULT VALUE NONE
 
-  @param     : A boolean to indicate whether the book has review
+  param     : A boolean to indicate whether the book has review
 
                 questions with DEFAULT VALUE False
 
-  @post      : The private members are set to the values of the
+  post      : The private members are set to the values of the
 
                 corresponding parameters.
 
@@ -54,9 +54,9 @@ Textbook::Textbook(string title, string author, int pageCount, string subject, b
 
 /**
 
-  @param  : a reference to a string representing the the subject of the book
+  param  : a reference to a string representing the the subject of the book
 
-  @post   : sets the private member variable to the value of the parameter
+  post   : sets the private member variable to the value of the parameter
 
 **/
 void Textbook::setSubject(const string& sub){
@@ -65,7 +65,7 @@ void Textbook::setSubject(const string& sub){
 
 /**
 
-  @return  : the subject of the textbook
+  return  : the subject of the textbook
 
 **/
 string Textbook::getSubject() const{
@@ -74,9 +74,9 @@ string Textbook::getSubject() const{
 
 /**
 
-  @param  : a reference to a grade_level
+  param  : a reference to a grade_level
 
-  @post   : sets the private member variable to the value of the parameter
+  post   : sets the private member variable to the value of the parameter
 
 **/
 grade_level Textbook::setGradelevel(const grade_level& grade){
@@ -84,7 +84,7 @@ grade_level Textbook::setGradelevel(const grade_level& grade){
 }
 /**
 
-  @return  : a string representative of the grade_level
+  return  : a string representative of the grade_level
 
             (e.g. if the grade level is JUNIOR_HIGH,
 
@@ -105,7 +105,7 @@ string Textbook::getGradelevel() const{
 
 /**
 
-  @post   : sets the review question flag to True
+  post   : sets the review question flag to True
 
 **/
 void Textbook::setReviewQuestions() const{
@@ -114,7 +114,7 @@ void Textbook::setReviewQuestions() const{
 
 /**
 
-  @return  : the flag indicating if the texbook has review questions
+  return  : the flag indicating if the texbook has review questions
 
 **/
 bool Textbook::checkReviewQuestions() const{

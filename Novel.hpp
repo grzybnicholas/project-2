@@ -18,16 +18,16 @@ class Novel: public Book{
  public:
   Novel()=default;
   Novel(string title, string author, int pageCount, string genre, bool digital = false, bool adapt = false);
-  string getGenre();
+  string getGenre() const;
   void setGenre(const string& genre);
-  vector<string> getCharacterList();
-  string getCharacterListString();
+  vector<string> getCharacterList() const;
+  string getCharacterListString() const;
   void addCharacter(const string& character);
-  bool hasFilmAdaptation();
-  void setFilmAdaptation();
-  review createReview(const double& score, const string& review);
-  double getAverageRating();
+  bool hasFilmAdaptation() const;
+  void setFilmAdaptation() const;
+  review createReview(const double& score, const string& rating);
+  double getAverageRating() const;
   void addReview(const review& rev);
-  void calculateAverageRating();
+  void calculateAverageRating() const;
 };
 #endif

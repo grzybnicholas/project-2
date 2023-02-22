@@ -7,7 +7,7 @@ struct review {
 
     double score_;
 
-    std::string rating_;
+    string rating_;
 
 };
 /**
@@ -32,8 +32,9 @@ struct review {
 
 */
 
-Novel::Novel(string title, string author, int pageCount, string genre, bool digital = false, bool adapt = false):Book(title, author, pageCount, digital){
+Novel::Novel(string title, string author, int pageCount, string genre, bool digital = false, bool adapt):Book(title, author, pageCount, digital){
   genre_= genre;
+  adaptation_ = adapt;
 }
 
 /**
@@ -42,7 +43,7 @@ Novel::Novel(string title, string author, int pageCount, string genre, bool digi
 
 **/
 
-string Novel::getGenre(){
+string Novel::getGenre() const{
     return genre_;
 }
 
@@ -65,8 +66,22 @@ void Novel::setGenre(const string& genre){
   @return   : the vector containing the list of characters for this novel
 
 **/
-vector<string> Novel::getCharacterList(){
+vector<string> Novel::getCharacterList() const{ 
   return character_list_;
+}
+/**
+
+  @return    : a string of all the characters in the
+
+              character_list_ private member, concatenated
+
+              and separated by a space " " .
+
+              For example: "character1 character2 character3"
+
+**/
+string Novel::getCharacterListString() const{
+  
 }
 
 /**
@@ -86,7 +101,7 @@ void Novel::addCharacter(const string& character){
   @return   : the value of the film_adaptation_ private member
 
 **/
-bool Novel::hasFilmAdaptation(){
+bool Novel::hasFilmAdaptation() const{
   return adaptation_;
 }
 
@@ -95,10 +110,28 @@ bool Novel::hasFilmAdaptation(){
   @post   : sets has_film_adaptation_ private member to true
 
 **/
-void Novel::setFilmAdaptation(){
+void Novel::setFilmAdaptation() const{
   adaptation_ = true;
 }
+/**
 
+  @param    : a reference to floating point number (double) indicating
+
+              the score of the  review
+
+  @param    : a reference to string indicating the rating of the review
+
+  @return   : creates and returns a review data type with
+
+              score and rating as indicated by the parameters
+
+*/
+review Novel::createReview(const double& score, const string& rating){
+ review myReview;
+ myReview.score_ = score;
+ myReview.rating_ = rating;
+ return myReview;
+}
 /**
 
   @param  : a reference to review object
@@ -114,6 +147,20 @@ void Novel::addReview(const review& rev){
   @return   : the value of the average rating private member
 
 **/
-double Novel::getAverageRating(){
+double Novel::getAverageRating() const{
   return average_rating_;
+}
+
+
+/**
+
+  @post   : retrieves all scores from the reviews_ vector and
+
+            computes the average to set value of the average_rating_
+
+            private member
+
+**/
+void Novel::calculateAverageRating() const{
+
 }

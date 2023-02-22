@@ -16,11 +16,11 @@ class Manual: public Book{
    Manual();
    Manual(string title,string author, int pageCount,string device,string url,bool digital = false, bool visualAid = false);
    void setDevice(const string& device);
-   string getDevice();
+   string getDevice() const;
    bool setWebsite(const string& website);
-   string getWebsite();
+   string getWebsite() const;
    void setVisualAid(const bool& visual);
-   bool hasVisualAid();
-   bool hasWebsite();
+   bool hasVisualAid() const;
+   bool hasWebsite() const;
 };
 #endif

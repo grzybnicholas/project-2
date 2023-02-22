@@ -36,9 +36,10 @@ Manual::Manual(){
                 empty string and the website flag is set to False.
 */
 // ^(https|http):\/\/www\.\w+\.\w{2,}
-Manual::Manual(string title,string author, int pageCount, string device,string url, bool digital = false,bool visualAid = false):Book(title,author,pageCount,digital){
+Manual::Manual(string title,string author, int pageCount, string device,string url, bool digital = false,bool visualAid):Book(title,author,pageCount,digital){
   device_ = device;
   url_ = url; 
+  visual_aid_ = visualAid;
   if(regex_match(url_, regex{"^(https|http):\/\/www\.\w+\.\w{2,}"})){
     website_ = true;
   }else{
@@ -61,7 +62,7 @@ void Manual::setDevice(const string& device){
 /**
   @return  : the variable indicating the device the manual is for
 **/
-string Manual::getDevice(){
+string Manual::getDevice() const{
   return device_;
 }
 /**
@@ -96,7 +97,7 @@ bool Manual::setWebsite(const string& website){
 /**
   @return  : the url for the website
 **/
-string Manual::getWebsite(){
+string Manual::getWebsite() const{
   return url_;
 }
 /**
@@ -111,13 +112,13 @@ void Manual::setVisualAid(const bool& visual){
 /**
   @return  : the visual aid flag
 **/
-bool Manual::hasVisualAid(){
+bool Manual::hasVisualAid() const{
   return visual_aid_;
 }
 
 /**
   @return  : the has website flag
 **/
-bool Manual::hasWebsite(){
+bool Manual::hasWebsite() const{
   return website_;
 }

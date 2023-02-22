@@ -15,11 +15,11 @@ class Textbook: public Book{
     Textbook();
     Textbook(string title, string author, int pageCount, string subject, bool digital = false, grade_level grade = NONE, bool review = false);
     void setSubject(const string& sub);
-    string getSubject();
+    string getSubject() const;
     grade_level setGradelevel(const grade_level& grade);
-    string getGradelevel();
-    void setReviewQuestions();
-    bool checkReviewQuestions();
+    string getGradelevel() const;
+    void setReviewQuestions() const;
+    bool checkReviewQuestions() const;
 
 };
 

@@ -46,8 +46,9 @@ Textbook::Textbook(){
                 corresponding parameters.
 
 */
-Textbook::Textbook(string title, string author, int pageCount, string subject, bool digital = false, grade_level grade = NONE, bool review = false):Book(title,author,pageCount,digital){
+Textbook::Textbook(string title, string author, int pageCount, string subject, bool digital = false, grade_level grade = NONE, bool review):Book(title,author,pageCount,digital){
     subject_ = subject;
+    review_ = review;
 }
 
 
@@ -67,7 +68,7 @@ void Textbook::setSubject(const string& sub){
   @return  : the subject of the textbook
 
 **/
-string Textbook::getSubject(){
+string Textbook::getSubject() const{
     return subject_;
 }
 
@@ -90,7 +91,7 @@ grade_level Textbook::setGradelevel(const grade_level& grade){
             it returns "JUNIOR HIGH")
 
 **/
-string Textbook::getGradelevel(){
+string Textbook::getGradelevel() const{
   if(grade_ = ELEMENTARY){
     return "ELEMENTARY";
   }else if(grade_ = JUNIOR_HIGH){
@@ -107,7 +108,7 @@ string Textbook::getGradelevel(){
   @post   : sets the review question flag to True
 
 **/
-void Textbook::setReviewQuestions(){
+void Textbook::setReviewQuestions() const{
  review_ = true;
 }
 
@@ -116,6 +117,6 @@ void Textbook::setReviewQuestions(){
   @return  : the flag indicating if the texbook has review questions
 
 **/
-bool Textbook::checkReviewQuestions(){
+bool Textbook::checkReviewQuestions() const{
     return review_;
 }

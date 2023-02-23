@@ -96,9 +96,9 @@ string Textbook::getGradeLevel() const{
   if(grade_ == ELEMENTARY){
     return "ELEMENTARY";
   }else if(grade_ == JUNIOR_HIGH){
-    return "JUNIOR_HIGH";
+    return "JUNIOR HIGH";
   }else if(grade_ == HIGH_SCHOOL){
-    return "HIGH_SCHOOL";
+    return "HIGH SCHOOL";
   }else if(grade_ == COLLEGE){
     return "COLLEGE";
   } else{

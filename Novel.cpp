@@ -2,8 +2,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-using namespace std;
-
+using namescape std;
 /**
 
   Parameterized constructor.
@@ -26,7 +25,7 @@ using namespace std;
 
 */
 
-Novel::Novel(string title, string author, int pageCount, string genre, bool digital, bool adapt):Book(title, author, pageCount, digital){
+Novel::Novel(string title,string author, int pageCount, string genre, bool digital, bool adapt):Book(title, author, pageCount, digital){
   genre_= genre;
   adaptation_ = adapt;
 }

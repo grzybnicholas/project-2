@@ -161,9 +161,9 @@ double Novel::getAverageRating() const{
 **/
 void Novel::calculateAverageRating(){
     double average = 0
-    for (review x : reviews_) {
-          average += x.score_;
+    int size = reviews_.size();
+    for (int i = 0; i < size; i++) {
+          average += reviews_[i].score_;
     }
-    average /= reviews_.size();
-    average_rating_ = average;
+    average_rating_ = average/size;
 }

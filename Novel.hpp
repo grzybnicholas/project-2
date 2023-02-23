@@ -7,10 +7,16 @@
 #include <vector>
 using namespace std;
 
+struct review {
+
+    double score_;
+
+    string rating_;
+
+};
 class Novel: public Book{
  private:
   string genre_;
-  struct review;
   vector<string> character_list_;
   vector<review> reviews_;
   double average_rating_;
@@ -24,7 +30,7 @@ class Novel: public Book{
   string getCharacterListString() const;
   void addCharacter(const string& character);
   bool hasFilmAdaptation() const;
-  void setFilmAdaptation() const;
+  void setFilmAdaptation();
   review createReview(const double& score, const string& rating);
   double getAverageRating() const;
   void addReview(const review& rev);

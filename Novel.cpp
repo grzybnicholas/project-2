@@ -3,13 +3,7 @@
 #include <string>
 #include <vector>
 using namespace std;
-struct review {
 
-    double score_;
-
-    string rating_;
-
-};
 /**
 
   Parameterized constructor.
@@ -81,14 +75,8 @@ vector<string> Novel::getCharacterList() const{
 
 **/
 string Novel::getCharacterListString() const{
-      string ret = "";
-    for (int i = 0; i < character_list_.size(); ++i) {
-        ret += character_list_[i]; // replace character_list_[i] with character_list_.at(i) if it doesn't work initially
-        if (i < character_list.size() - 1){
-          ret += " ";
-          }
-        } 
-    }
+
+}
 
 
 /**
@@ -117,7 +105,7 @@ bool Novel::hasFilmAdaptation() const{
   post   : sets has_film_adaptation_ private member to true
 
 **/
-void Novel::setFilmAdaptation() const{
+void Novel::setFilmAdaptation() {
   adaptation_ = true;
 }
 /**
@@ -147,7 +135,7 @@ review Novel::createReview(const double& score, const string& rating){
 
 **/
 void Novel::addReview(const review& rev){
- reviews_.push_buck(rev);
+ reviews_.push_back(rev);
 }
 /**
 

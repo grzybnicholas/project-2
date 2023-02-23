@@ -160,10 +160,11 @@ double Novel::getAverageRating() const{
             private member
 
 **/
-void Novel::calculateAverageRating() const{
-    double average_rating_ = 0;
+void Novel::calculateAverageRating(){
+    double average = 0
     for (review x : reviews_) {
-          average_rating_ += x.score_;
+          average += x.score_;
     }
-    average_rating_ /= reviews_.size();
+    average /= reviews_.size();
+    average_rating_ = average;
 }

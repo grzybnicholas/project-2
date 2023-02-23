@@ -17,7 +17,7 @@ class Textbook: public Book{
     Textbook(string title, string author, int pageCount, string subject, bool digital = false, grade_level grade = NONE, bool review = false);
     void setSubject(const string& sub);
     string getSubject() const;
-    void setGradelevel(const grade_level& grade);
+    void setGradeLevel(const grade_level& grade);
     string getGradeLevel() const;
     void setReviewQuestions();
     bool checkReviewQuestions() const;

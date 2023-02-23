@@ -40,15 +40,13 @@ Manual::Manual(string title,string author, int pageCount, string device,bool dig
   device_ = device;
   url_ = url; 
   visual_aid_ = visualAid;
-  if(regex_match(url_, regex{"^(https|http)://www/./w+/./w{2,}"})){
+  if(regex_match(url_, regex{"https?://www\\..+\\..{2,}"})){
     website_ = true;
   }else{
     url_ = "";
     website_ = false;
   }
   }
-  
-
 
 /**
   param  : a reference to a string representing the device
@@ -85,10 +83,11 @@ string Manual::getDevice() const{
 
 **/
 bool Manual::setWebsite(const string& website){
- if(!regex_match(website, regex{"^(https|http)://www./w+./w{2,}"})){
+ if(!regex_match(website, regex{"https?://www\\..+\\..{2,}"})){
   url_ = "Broken Link";
   website_ = true;
  }else{
+  url_ = website;
   website_ = true;
  }
  return website_;

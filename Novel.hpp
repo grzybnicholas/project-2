@@ -34,6 +34,5 @@ class Novel: public Book{
   review createReview(const double& score, const string& rating);
   double getAverageRating() const;
   void addReview(const review& rev);
-  void calculateAverageRating() const;
-};
+  void calculateAverageRating();
 #endif

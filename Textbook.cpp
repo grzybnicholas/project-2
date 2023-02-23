@@ -92,7 +92,7 @@ void Textbook::setGradeLevel(const grade_level& grade){
             it returns "JUNIOR HIGH")
 
 **/
-string Textbook::getGradelevel() const{
+string Textbook::getGradeLevel() const{
   if(grade_ == ELEMENTARY){
     return "ELEMENTARY";
   }else if(grade_ == JUNIOR_HIGH){

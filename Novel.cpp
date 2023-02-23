@@ -79,6 +79,7 @@ string Novel::getCharacterListString() const{
  for(int i = 0; i < character_list_.size();i++){
   chara += character_list_[i] + " ";
  }
+ return chara;
 }
 
 

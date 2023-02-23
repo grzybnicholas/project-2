@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-using namescape std;
+using namespace std;
 /**
 
   Parameterized constructor.
@@ -160,10 +160,10 @@ double Novel::getAverageRating() const{
 
 **/
 void Novel::calculateAverageRating(){
-    double average = 0
-    int size = reviews_.size();
-    for (int i = 0; i < size; i++) {
+    double average = 0;
+    int x = reviews_.size();
+    for (int i = 0; i < x; i++) {
           average += reviews_[i].score_;
     }
-    average_rating_ = average/size;
+    average_rating_ = average/x;
 }

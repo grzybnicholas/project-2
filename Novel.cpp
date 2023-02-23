@@ -74,10 +74,11 @@ vector<string> Novel::getCharacterList() const{
 
 **/
 string Novel::getCharacterListString() const{
- string chara;
- for(int i = 0; i < character_list_.size();i++){
+ string chara = "";
+ for(int i = 0; i < character_list_.size() - 1;i++){
   chara += character_list_[i] + " ";
  }
+ chara += character_list_[character_list_.size() - 1];
  return chara;
 }
 

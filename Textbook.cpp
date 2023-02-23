@@ -46,9 +46,10 @@ Textbook::Textbook(){
                 corresponding parameters.
 
 */
-Textbook::Textbook(string title, string author, int pageCount, string subject, bool digital = false, grade_level grade = NONE, bool review):Book(title,author,pageCount,digital){
+Textbook::Textbook(string title, string author, int pageCount, string subject, bool digital, grade_level grade, bool review):Book(title,author,pageCount,digital){
     subject_ = subject;
     review_ = review;
+    grade_ = grade;
 }
 
 
@@ -110,7 +111,7 @@ string Textbook::getGradelevel() const{
   post   : sets the review question flag to True
 
 **/
-void Textbook::setReviewQuestions() const{
+void Textbook::setReviewQuestions() {
  review_ = true;
 }
 

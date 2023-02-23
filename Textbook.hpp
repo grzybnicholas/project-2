@@ -19,7 +19,7 @@ class Textbook: public Book{
     string getSubject() const;
     void setGradelevel(const grade_level& grade);
     string getGradelevel() const;
-    void setReviewQuestions() const;
+    void setReviewQuestions();
     bool checkReviewQuestions() const;
 
 };

@@ -26,7 +26,7 @@ using namespace std;
 
 */
 
-Novel::Novel(string title, string author, int pageCount, string genre, bool digital = false, bool adapt):Book(title, author, pageCount, digital){
+Novel::Novel(string title, string author, int pageCount, string genre, bool digital, bool adapt):Book(title, author, pageCount, digital){
   genre_= genre;
   adaptation_ = adapt;
 }

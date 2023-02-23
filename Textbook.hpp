@@ -18,7 +18,7 @@ class Textbook: public Book{
     void setSubject(const string& sub);
     string getSubject() const;
     void setGradelevel(const grade_level& grade);
-    string getGradelevel() const;
+    string getGradeLevel() const;
     void setReviewQuestions();
     bool checkReviewQuestions() const;
 

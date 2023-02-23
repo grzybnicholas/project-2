@@ -14,7 +14,7 @@ class Manual: public Book{
     bool website_;
   public:
    Manual();
-   Manual(string title,string author, int pageCount,string device,string url,bool digital = false, bool visualAid = false);
+   Manual(string title,string author, int pageCount,string device,bool digital = false,string url ="", bool visualAid = false);
    void setDevice(const string& device);
    string getDevice() const;
    bool setWebsite(const string& website);

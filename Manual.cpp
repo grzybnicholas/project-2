@@ -15,7 +15,7 @@ Manual::Manual(){
 }
 
 /**
-  Parameterized constructor.
+  Parameterized constructor.ons
   param     : The title of the book (a string)
   param     : The author of the book (a string)
   param     : The number of pages in the book (a positive integer)

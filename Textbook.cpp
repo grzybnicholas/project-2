@@ -80,7 +80,7 @@ string Textbook::getSubject() const{
   post   : sets the private member variable to the value of the parameter
 
 **/
-void Textbook::setGradelevel(const grade_level& grade){
+void Textbook::setGradeLevel(const grade_level& grade){
     grade_ = grade;
 }
 /**
@@ -111,7 +111,7 @@ string Textbook::getGradelevel() const{
   post   : sets the review question flag to True
 
 **/
-void Textbook::setReviewQuestions() {
+void Textbook::setReviewQuestions(){
  review_ = true;
 }
 

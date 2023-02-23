@@ -36,7 +36,7 @@ Manual::Manual(){
                 empty string and the website flag is set to False.
 */
 // ^(https|http):\/\/www\.\w+\.\w{2,}
-Manual::Manual(string title,string author, int pageCount, string device,string url, bool digital,bool visualAid):Book(title,author,pageCount,digital){
+Manual::Manual(string title,string author, int pageCount, string device,bool digital,string url,bool visualAid):Book(title,author,pageCount,digital){
   device_ = device;
   url_ = url; 
   visual_aid_ = visualAid;

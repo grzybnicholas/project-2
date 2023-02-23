@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 
-enum grade_level {NONE,  ELEMENTARY, JUNIOR_HIGH, HIGH_SCHOOL, COLLEGE};
+
 /**
 
   Default constructor.
@@ -79,7 +79,7 @@ string Textbook::getSubject() const{
   post   : sets the private member variable to the value of the parameter
 
 **/
-grade_level Textbook::setGradelevel(const grade_level& grade){
+void Textbook::setGradelevel(const grade_level& grade){
     grade_ = grade;
 }
 /**
@@ -92,14 +92,16 @@ grade_level Textbook::setGradelevel(const grade_level& grade){
 
 **/
 string Textbook::getGradelevel() const{
-  if(grade_ = ELEMENTARY){
+  if(grade_ == ELEMENTARY){
     return "ELEMENTARY";
-  }else if(grade_ = JUNIOR_HIGH){
+  }else if(grade_ == JUNIOR_HIGH){
     return "JUNIOR_HIGH";
-  }else if(grade_ = HIGH_SCHOOL){
+  }else if(grade_ == HIGH_SCHOOL){
     return "HIGH_SCHOOL";
-  }else if(grade_ = COLLEGE){
+  }else if(grade_ == COLLEGE){
     return "COLLEGE";
+  } else{
+    return "NONE";
   }
 }
 
